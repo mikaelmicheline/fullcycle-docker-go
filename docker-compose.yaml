@@ -1,0 +1,11 @@
+# usado para buildar o arquivo app.go
+version: '3.8'
+
+services: 
+
+  app:
+    image: golang:1.20.4-bullseye
+    container_name: fullcycledev    
+    command: bash -c "cd /usr/src/app && go mod init fullCycleMessage && go build app.go && ./app"
+    volumes:
+      - .:/usr/src/app
