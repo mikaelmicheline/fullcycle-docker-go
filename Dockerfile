@@ -7,8 +7,7 @@ COPY . .
 RUN go mod init fullCycleMessage && \ 
     go build app.go 
 
-# FROM scratch
-FROM golang:1.20
+FROM scratch
 
 WORKDIR /usr/src/app
 
